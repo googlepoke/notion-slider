@@ -1,276 +1,97 @@
-<html>
-<h1>What makes IFS Cloud unique?</h1>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IFS Cloud Unique Features</title>
+<style>
+  .content-slider {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .slider {
+    width: 100%;
+    max-width: 680px;
+    margin: 20px auto;
+    position: relative;
+  }
+
+  .slider ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+  }
+
+  .slider li {
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .slider li.active {
+    opacity: 1;
+  }
+
+  .quote {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .source {
+    font-size: 16px;
+    text-align: right;
+    color: #360065;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+<h1 style="text-align: center;">What makes IFS Cloud unique?</h1>
 <div class="content-slider">
   <div class="slider">
-    <div class="mask">
-      <ul>
-        <li class="anim1">
-          <div class="quote">"Monitoring assets and making real-time decisions on health and maintenance."</div>
-          <div class="source">Operational Decisions</div>
-        </li>
-        <li class="anim2">
-          <div class="quote">"Monthly to yearly planning around asset investments and performance optimization."</div>
-          <div class="source">Tactical Decisions</div>
-        </li>
-        <li class="anim3">
-          <div class="quote">"Long-term direction and organizational growth are supported through efficient management of assets, ensuring alignment with company strategy and longevity."</div>
-          <div class="source">Strategic Decisions</div>
-        </li>
-        <li class="anim4">
-          <div class="quote">"Leverage emerging technologies with clear business value from day one with IFS Cloud."</div>
-          <div class="source">Innovation Embedded and Ready to Use</div>
-        </li>
-        <li class="anim5">
-          <div class="quote">"Experience a responsive, people-first UI and comprehensive support with IFS Cloud."</div>
-          <div class="source">Delightful Product Experiences</div>
-        </li>
-      </ul>
-    </div>
+    <ul>
+      <li class="active">
+        <div class="quote">"One product + One platform. Simple and easy-to-use User Interface on any device"</div>
+        <div class="source">One Unified Platform</div>
+      </li>
+      <li>
+        <div class="quote">"Tailor IFS Cloud to Thermosash's needs. Select the functionality required today & expand with additional modules as you scale & grow"</div>
+        <div class="source">Flexible Growth with Modular Capabilities</div>
+      </li>
+      <li>
+        <div class="quote">"Eliminate operational complexities. Drive business processes"</div>
+        <div class="source">Simplify Operations & Drive Innovation</div>
+      </li>
+      <li>
+        <div class="quote">"Gain comprehensive oversight of project timelines, costs, resources & deliverables. Drive efficiency & accountability"</div>
+        <div class="source">End-to-End Visibility</div>
+      </li>
+      <li>
+        <div class="quote">"Leverage AI seamlessly in your business. Eliminate complex IT systems & integrations"</div>
+        <div class="source">AI Embedded with Simple Integration</div>
+      </li>
+    </ul>
   </div>
 </div>
-<style>
-.content-slider {
-  width: 100%;
-  height: 120px;
-}
-.slider {
-  width: 680px;
-  margin: 20px auto 0;
-  overflow: visible;
-  position: relative;
-}
-.mask {
-  overflow: hidden;
-  height: 120px;
-}
-.slider ul {
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
-.slider li {
-  width: 680px;
-  height: 320px;
-  position: absolute;
-  top: -125px;
-  list-style: none;
-}
-.slider .quote {
-  font-size: 20px;
-  font-weight: bold;
-}
-.slider .source {
-  font-size: 16px;
-  text-align: right;
-}
-.source {
-  color: #360065;
-  font-weight: bold;
-}
-.slider li.anim1 {
-  animation: cycle1 25s linear infinite;
-}
-.slider li.anim2 {
-  animation: cycle2 25s linear infinite;
-}
-.slider li.anim3 {
-  animation: cycle3 25s linear infinite;
-}
-.slider li.anim4 {
-  animation: cycle4 25s linear infinite;
-}
-.slider li.anim5 {
-  animation: cycle5 25s linear infinite;
-}
 
-/* .slider:hover li {animation-play-state: paused;} */
+<script>
+  const slides = document.querySelectorAll('.slider li');
+  let currentSlide = 0;
 
-@keyframes cycle1 {
-  0% {
-    top: 0px;
+  function showNextSlide() {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
   }
-  4% {
-    top: 0px;
-  }
-  16% {
-    top: 0px;
-    opacity: 1;
-    z-index: 0;
-  }
-  20% {
-    top: 125px;
-    opacity: 0;
-    z-index: 0;
-  }
-  21% {
-    top: -125px;
-    opacity: 0;
-    z-index: -1;
-  }
-  50% {
-    top: -125px;
-    opacity: 0;
-    z-index: -1;
-  }
-  92% {
-    top: -125px;
-    opacity: 0;
-    z-index: 0;
-  }
-  96% {
-    top: -125px;
-    opacity: 0;
-  }
-  100% {
-    top: 0px;
-    opacity: 1;
-  }
-}
 
-@keyframes cycle2 {
-  0% {
-    top: -125px;
-    opacity: 0;
-  }
-  16% {
-    top: -125px;
-    opacity: 0;
-  }
-  20% {
-    top: 0px;
-    opacity: 1;
-  }
-  24% {
-    top: 0px;
-    opacity: 1;
-  }
-  36% {
-    top: 0px;
-    opacity: 1;
-    z-index: 0;
-  }
-  40% {
-    top: 125px;
-    opacity: 0;
-    z-index: 0;
-  }
-  41% {
-    top: -125px;
-    opacity: 0;
-    z-index: -1;
-  }
-  100% {
-    top: -125px;
-    opacity: 0;
-    z-index: -1;
-  }
-}
+  setInterval(showNextSlide, 5000); // Change slide every 5 seconds
+</script>
 
-@keyframes cycle3 {
-  0% {
-    top: -125px;
-    opacity: 0;
-  }
-  36% {
-    top: -125px;
-    opacity: 0;
-  }
-  40% {
-    top: 0px;
-    opacity: 1;
-  }
-  44% {
-    top: 0px;
-    opacity: 1;
-  }
-  56% {
-    top: 0px;
-    opacity: 1;
-    z-index: 0;
-  }
-  60% {
-    top: 125px;
-    opacity: 0;
-    z-index: 0;
-  }
-  61% {
-    top: -125px;
-    opacity: 0;
-    z-index: -1;
-  }
-  100% {
-    top: -125px;
-    opacity: 0;
-    z-index: -1;
-  }
-}
-
-@keyframes cycle4 {
-  0% {
-    top: -125px;
-    opacity: 0;
-  }
-  56% {
-    top: -125px;
-    opacity: 0;
-  }
-  60% {
-    top: 0px;
-    opacity: 1;
-  }
-  64% {
-    top: 0px;
-    opacity: 1;
-  }
-  76% {
-    top: 0px;
-    opacity: 1;
-    z-index: 0;
-  }
-  80% {
-    top: 125px;
-    opacity: 0;
-    z-index: 0;
-  }
-  81% {
-    top: -125px;
-    opacity: 0;
-    z-index: -1;
-  }
-  100% {
-    top: -125px;
-    opacity: 0;
-    z-index: -1;
-  }
-}
-
-@keyframes cycle5 {
-  0% {
-    top: -125px;
-    opacity: 0;
-  }
-  76% {
-    top: -125px;
-    opacity: 0;
-  }
-  80% {
-    top: 0px;
-    opacity: 1;
-  }
-  84% {
-    top: 0px;
-    opacity: 1;
-  }
-  96% {
-    top: 0px;
-    opacity: 1;
-    z-index: 0;
-  }
-  100% {
-    top: 125px;
-    opacity: 0;
-    z-index: 0;
-  }
-}
-</style>
+</body>
 </html>
